@@ -1,3 +1,13 @@
+//Música 
+const music = document.getElementById("bgMusic");
+
+// Espera o áudio carregar
+music.addEventListener('canplay', () => {
+  // Define o tempo inicial para 23 segundos
+  music.currentTime = 23;
+  music.play();
+});
+
 const modal = document.getElementById("surpriseModal");
 const btn = document.getElementById("surpriseBtn");
 const span = document.querySelector(".close");
