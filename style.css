@@ -5,6 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #ffb6c1, #ffdde1);
   height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,19 +14,19 @@ body {
   color: #4a0e23;
 }
 
-/* Título */
+/* Fonte cursiva no título */
 h3 {
-  font-size: 2.3rem;
-  font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-size: 3.5rem;
   margin-bottom: 10px;
-  animation: fadeIn 2s ease;
   color: #8b0036;
+  animation: fadeIn 2s ease;
 }
 
-/* Texto */
+/* Caixa de texto romântica */
 p {
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   background: rgba(255, 255, 255, 0.6);
   padding: 20px;
@@ -35,28 +36,78 @@ p {
   animation: fadeIn 2.5s ease;
 }
 
-/* Botão romântico */
+/* Botão com animação */
 button {
   margin-top: 25px;
-  padding: 12px 22px;
+  padding: 12px 25px;
   background-color: #ff4d6d;
   color: white;
   border: none;
-  border-radius: 25px;
-  font-size: 1.1rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  animation: pulse 1.8s infinite;
 }
 
-/* Efeito ao passar o mouse */
 button:hover {
   background-color: #ff1e4d;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Animação suave */
+/* Animações */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* ❤️ Corações flutuando */
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.hearts::before,
+.hearts::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+.hearts::before {
+  left: 20%;
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+.hearts::after {
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  30% { opacity: 1; }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
 }
