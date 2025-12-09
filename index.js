@@ -1,3 +1,21 @@
+//Start page
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+const mainContent = document.getElementById("mainContent");
+const music = document.getElementById("bgMusic");
+
+startBtn.addEventListener("click", () => {
+  // Esconde a tela inicial
+  startScreen.style.display = "none";
+  
+  // Mostra o conteúdo principal
+  mainContent.style.display = "block";
+
+  // Inicia a música aos 23 segundos
+  music.currentTime = 23;
+  music.play();
+});
+
 const modal = document.getElementById("surpriseModal");
 const btn = document.getElementById("surpriseBtn");
 const span = document.querySelector(".close");
