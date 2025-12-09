@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
   <link rel="stylesheet" href="style.css">
 
@@ -11,28 +12,57 @@
   <!-- Corações flutuando -->
   <div class="hearts"></div>
 
-  <!-- Música de fundo -->
+  <!-- Música romântica -->
   <audio autoplay loop>
     <source src="sua-musica.mp3" type="audio/mp3">
   </audio>
 
-  <h3>Meu Amor</h3>
+  <div class="romantic-box">
 
-  <p>
-    Dedico essa página para dizer o quanto te amo </br> 
-    e dizer que você será minha esposa um dia </br> 
-    eu escolhi você para ser minha mulher e mãe dos meus filhos </br>
-    dizer que você é uma pessoa muito especial e importante para mim e que eu admiro muito você meu amor</br>
-    sei que um dia seremos muito felizes morando juntos. </br>
-    Te desejo todos os dias, sinto sua falta no instante em que você fica longe de mim </br>
-    quero ter você comigo todos os dias e a todo momento meu amor </br>
-    amo seu sorriso, amo nossas piadas, as conversas sérias </br> 
-    amo seu cheiro quero cuidar de você pelo resto da minha vida </br>
-    Te amo minha branquela dengosa.
-  </p>
+      <h3>Olá Meu Amor</h3>
+      <h4>De: Samuel </br>
+          Para: Daiane Amor da minha vida</h4>
 
-  <button onclick="executeLoveAlg()">Clique</button>
+    <p>
+      Dedico essa página para dizer o quanto te amo </br> 
+      e dizer que você será minha esposa um dia </br> 
+      eu escolhi você para ser minha mulher e mãe dos meus filhos </br>
+      dizer que você é uma pessoa muito especial e importante para mim e que eu admiro muito você meu amor</br>
+      sei que um dia seremos muito felizes morando juntos. </br>
+      Te desejo todos os dias, sinto sua falta no instante em que você fica longe de mim </br>
+      quero ter você comigo todos os dias e a todo momento meu amor </br>
+      amo seu sorriso, amo nossas piadas, as conversas sérias </br> 
+      amo seu cheiro quero cuidar de você pelo resto da minha vida </br>
+      Te amo minha branquela dengosa.
+    </p>
 
-</body>
+      <button id="surpriseBtn">Clique para a Surpresa 💖</button>
+
+  </div>
+
+  <!-- Modal com mensagem surpresa -->
+  <div id="surpriseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <h2>Surpresa pra Você ❤️</h2>
+
+      <p class="modal-text">
+        Cada momento ao seu lado é especial...  
+        Aqui vão algumas lembranças nossas:
+      </p>
+
+      <div class="photo-gallery">
+        <!-- Coloque aqui as suas fotos -->
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+      </div>
+
+    </div>
+  </div>
 
 <script src="index.js"></script>
+
+</body>
+</html>
