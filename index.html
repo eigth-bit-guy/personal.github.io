@@ -75,11 +75,20 @@
   
 <script src="index.js"></script>
 <script>
+  //Start page
+  const startBtn = document.getElementById("startBtn");
+  const startScreen = document.getElementById("startScreen");
+  const mainContent = document.getElementById("mainContent");
   const music = document.getElementById("bgMusic");
 
-  // Espera o áudio carregar
-  music.addEventListener('canplay', () => {
-    // Define o tempo inicial para 23 segundos
+  startBtn.addEventListener("click", () => {
+    // Esconde a tela inicial
+    startScreen.style.display = "none";
+  
+    // Mostra o conteúdo principal
+    mainContent.style.display = "block";
+
+    // Inicia a música aos 23 segundos
     music.currentTime = 23;
     music.play();
   });
