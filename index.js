@@ -35,3 +35,25 @@ btn.onclick = function () {
   typeWriter();
 }
 
+// Carrossel
+const track = document.querySelector(".carousel-track");
+const images = Array.from(track.children);
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.onclick = () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateCarousel();
+};
+
+prevBtn.onclick = () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateCarousel();
+};
+
