@@ -37,23 +37,25 @@ btn.onclick = function () {
 
 // Carrossel
 const track = document.querySelector(".carousel-track");
-const images = Array.from(track.children);
+const slides = document.querySelectorAll(".carousel-track img");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
-let currentIndex = 0;
+let currentSlide = 0;
 
 function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const width = slides[0].clientWidth;
+  track.style.transform = `translateX(-${currentSlide * width}px)`;
 }
 
 nextBtn.onclick = () => {
-  currentIndex = (currentIndex + 1) % images.length;
+  currentSlide = (currentSlide + 1) % slides.length;
   updateCarousel();
 };
 
 prevBtn.onclick = () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   updateCarousel();
 };
 
+window.onresize = updateCarousel;
