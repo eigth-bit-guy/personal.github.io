@@ -17,7 +17,7 @@ window.onclick = function (event) {
 }
 
 // Texto animado
-const text = "Cada momento ao seu lado é especial... Aqui vão algumas lembranças nossas.";
+const text = "Cada momento ao seu lado é especial meu amor... Aqui vão algumas lembranças nossas :) .";
 let index = 0;
 
 function typeWriter() {
