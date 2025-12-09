@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-image: url('https://i.imgur.com/3c1OQju.png'); /* coloque um fundo de unicórnios */
+  background-image: url('unicornio.jpg'); /* coloque um fundo de unicórnios */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -156,7 +156,7 @@ button:hover {
 
 /* Fundo com estampa de unicórnios */
 body {
-  background-image: url('https://i.imgur.com/3c1OQju.png'); /* coloque sua imagem aqui */
+  background-image: url('unicornio.jpg'); /* coloque sua imagem aqui */
   background-size: 250px;
   background-repeat: repeat;
 }
