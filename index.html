@@ -67,6 +67,16 @@
   </div>
 
 <script src="index.js"></script>
+<script>
+  const music = document.getElementById("bgMusic");
 
+  // Espera o áudio carregar
+  music.addEventListener('canplay', () => {
+    // Define o tempo inicial para 23 segundos
+    music.currentTime = 23;
+    music.play();
+  });
+</script>
+  
 </body>
 </html>
