@@ -164,24 +164,29 @@ body {
 /* Carrossel */
 .carousel {
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   overflow: hidden;
-  border-radius: 15px;
   margin: 20px auto;
+  border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.25);
 }
 
+/* Linha de slides */
 .carousel-track {
   display: flex;
+  width: 300%; /* 3 fotos = 300% */
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel img {
+/* Cada imagem ocupa 100% da área do carrossel */
+.carousel-track img {
   width: 100%;
+  height: auto;
+  flex-shrink: 0; /* impede entortar */
   border-radius: 15px;
 }
 
-/* Botões do carrossel */
+/* Botões */
 .carousel-buttons {
   margin-top: 10px;
   display: flex;
